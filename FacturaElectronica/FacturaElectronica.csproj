@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1979E2A9-0BE0-4950-BFA2-3E056F275EF2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FacturaElectronica</RootNamespace>
+    <AssemblyName>FacturaElectronica</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Certificado.cs" />
+    <Compile Include="CFDI33\ComplementosConceptos\terceros11.cs">
+      <DependentUpon>terceros11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComplementosConceptos\terceros11.Designer.cs">
+      <DependentUpon>terceros11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\Complementos\c_TipoCadenaPago.cs" />
+    <Compile Include="CFDI33\Complementos\implocal.cs">
+      <DependentUpon>implocal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\Complementos\implocal.Designer.cs">
+      <DependentUpon>implocal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\Complementos\Pagos10.cs">
+      <DependentUpon>Pagos10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\Complementos\Pagos10.Designer.cs">
+      <DependentUpon>Pagos10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\Complementos\PagosPago.cs" />
+    <Compile Include="CFDI33\Complementos\PagosPago.Designer.cs">
+      <DependentUpon>PagosPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\Complementos\PagosPagoDoctoRelacionado.cs" />
+    <Compile Include="CFDI33\Complementos\PagosPagoDoctoRelacionado.Designer.cs">
+      <DependentUpon>PagosPagoDoctoRelacionado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\Complementos\PagosPagoImpuestos.cs" />
+    <Compile Include="CFDI33\Complementos\PagosPagoImpuestos.Designer.cs">
+      <DependentUpon>PagosPagoImpuestos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\Complementos\PagosPagoImpuestosRetencion.cs" />
+    <Compile Include="CFDI33\Complementos\PagosPagoImpuestosRetencion.Designer.cs">
+      <DependentUpon>PagosPagoImpuestosRetencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\Complementos\PagosPagoImpuestosTraslado.cs" />
+    <Compile Include="CFDI33\Complementos\PagosPagoImpuestosTraslado.Designer.cs">
+      <DependentUpon>PagosPagoImpuestosTraslado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\Complementos\TimbreFiscalDigitalv11.cs" />
+    <Compile Include="CFDI33\Complementos\TimbreFiscalDigitalv11.Design.cs" />
+    <Compile Include="CFDI33\Comprobante.cs" />
+    <Compile Include="CFDI33\Comprobante.Designer.cs">
+      <DependentUpon>Comprobante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteAddenda.cs" />
+    <Compile Include="CFDI33\ComprobanteAddenda.Designer.cs">
+      <DependentUpon>ComprobanteAddenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteCfdiRelacionados.cs" />
+    <Compile Include="CFDI33\ComprobanteCfdiRelacionados.Designer.cs">
+      <DependentUpon>ComprobanteCfdiRelacionados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteCfdiRelacionadosCfdiRelacionado.cs" />
+    <Compile Include="CFDI33\ComprobanteCfdiRelacionadosCfdiRelacionado.Designer.cs">
+      <DependentUpon>ComprobanteCfdiRelacionadosCfdiRelacionado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteComplemento.cs" />
+    <Compile Include="CFDI33\ComprobanteComplemento.Designer.cs">
+      <DependentUpon>ComprobanteComplemento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteConcepto.cs" />
+    <Compile Include="CFDI33\ComprobanteConcepto.Designer.cs">
+      <DependentUpon>ComprobanteConcepto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteConceptoComplementoConcepto.cs" />
+    <Compile Include="CFDI33\ComprobanteConceptoComplementoConcepto.Designer.cs">
+      <DependentUpon>ComprobanteConceptoComplementoConcepto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteConceptoCuentaPredial.cs" />
+    <Compile Include="CFDI33\ComprobanteConceptoCuentaPredial.Designer.cs">
+      <DependentUpon>ComprobanteConceptoCuentaPredial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteConceptoImpuestos.cs" />
+    <Compile Include="CFDI33\ComprobanteConceptoImpuestos.Designer.cs">
+      <DependentUpon>ComprobanteConceptoImpuestos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteConceptoImpuestosRetencion.cs" />
+    <Compile Include="CFDI33\ComprobanteConceptoImpuestosRetencion.Designer.cs">
+      <DependentUpon>ComprobanteConceptoImpuestosRetencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteConceptoImpuestosTraslado.cs" />
+    <Compile Include="CFDI33\ComprobanteConceptoImpuestosTraslado.Designer.cs">
+      <DependentUpon>ComprobanteConceptoImpuestosTraslado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteConceptoInformacionAduanera.cs" />
+    <Compile Include="CFDI33\ComprobanteConceptoInformacionAduanera.Designer.cs">
+      <DependentUpon>ComprobanteConceptoInformacionAduanera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteConceptoParte.cs" />
+    <Compile Include="CFDI33\ComprobanteConceptoParte.Designer.cs">
+      <DependentUpon>ComprobanteConceptoParte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteConceptoParteInformacionAduanera.cs" />
+    <Compile Include="CFDI33\ComprobanteConceptoParteInformacionAduanera.Designer.cs">
+      <DependentUpon>ComprobanteConceptoParteInformacionAduanera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteEmisor.cs" />
+    <Compile Include="CFDI33\ComprobanteEmisor.Designer.cs">
+      <DependentUpon>ComprobanteEmisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteImpuestos.cs" />
+    <Compile Include="CFDI33\ComprobanteImpuestos.Designer.cs">
+      <DependentUpon>ComprobanteImpuestos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteImpuestosRetencion.cs" />
+    <Compile Include="CFDI33\ComprobanteImpuestosRetencion.Designer.cs">
+      <DependentUpon>ComprobanteImpuestosRetencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteImpuestosTraslado.cs" />
+    <Compile Include="CFDI33\ComprobanteImpuestosTraslado.Designer.cs">
+      <DependentUpon>ComprobanteImpuestosTraslado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\ComprobanteReceptor.cs" />
+    <Compile Include="CFDI33\ComprobanteReceptor.Designer.cs">
+      <DependentUpon>ComprobanteReceptor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\c_ClaveProdServ.cs" />
+    <Compile Include="CFDI33\c_ClaveUnidad.cs" />
+    <Compile Include="CFDI33\c_FormaPago.cs" />
+    <Compile Include="CFDI33\c_Impuesto.cs" />
+    <Compile Include="CFDI33\c_MetodoPago.cs" />
+    <Compile Include="CFDI33\c_Moneda.cs" />
+    <Compile Include="CFDI33\c_Moneda_Decimales.cs" />
+    <Compile Include="CFDI33\c_Pais.cs" />
+    <Compile Include="CFDI33\c_RegimenFiscal.cs" />
+    <Compile Include="CFDI33\c_TasaOCuota.cs" />
+    <Compile Include="CFDI33\c_TipoDeComprobante.cs" />
+    <Compile Include="CFDI33\c_TipoFactor.cs" />
+    <Compile Include="CFDI33\c_TipoRelacion.cs" />
+    <Compile Include="CFDI33\c_UsoCFDI.cs" />
+    <Compile Include="CFDI33\t_Importe.cs" />
+    <Compile Include="CFDI33\t_RFC.cs" />
+    <Compile Include="CFDI33\t_RFC_PM.cs" />
+    <Compile Include="opensslkey.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QRCoder\AbstractQRCode.cs" />
+    <Compile Include="QRCoder\ASCIIQRCode.cs" />
+    <Compile Include="QRCoder\Base64QRCode.cs" />
+    <Compile Include="QRCoder\BitmapByteQRCode.cs" />
+    <Compile Include="QRCoder\Framework4.0Methods\String4Methods.cs" />
+    <Compile Include="QRCoder\QRCode.cs" />
+    <Compile Include="QRCoder\QRCodeData.cs" />
+    <Compile Include="QRCoder\QRCodeGenerator.cs" />
+    <Compile Include="QRCoder\SvgQRCode.cs" />
+    <Compile Include="Sellador.cs" />
+    <Compile Include="StringEnum.cs" />
+    <Compile Include="StringValueAttribute.cs" />
+    <Compile Include="VerificadorPatrones.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CFDI33\aerolineas.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\cadenaoriginal_3_3.xslt" />
+    <Content Include="CFDI33\cadenaoriginal_3_3Local.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\cadenaoriginal_TFD_1_1.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\certificadodedestruccion.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\cfdiregistrofiscal.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\ComercioExterior11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\ComplementosConceptos\terceros11.xslt" />
+    <Content Include="CFDI33\Complementos\implocal.xslt" />
+    <Content Include="CFDI33\Complementos\Pagos10.xslt" />
+    <Content Include="CFDI33\consumodecombustibles.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\divisas.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\donat11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\ecc11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\iedu.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\implocal.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\ine11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\leyendasFisc.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\nomina12.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\notariospublicos.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\obrasarteantiguedades.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\pagoenespecie.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\Pagos10.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\pfic.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\renovacionysustitucionvehiculos.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\servicioparcialconstruccion.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\terceros11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\TuristaPasajeroExtranjero.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\utilerias.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\valesdedespensa.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\vehiculousado.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CFDI33\ventavehiculos11.xslt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CFDI33\catCFDI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CFDI33\cfdv33.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CFDI33\ComplementosConceptos\terceros11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CFDI33\Complementos\catPagos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CFDI33\Complementos\implocal.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CFDI33\Complementos\Pagos10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CFDI33\tdCFDI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CFDI33\TimbreFiscalDigitalv11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>-->
+  <Target Name="AfterBuild" DependsOnTargets="AssignTargetPaths;Compile;ResolveKeySource" Inputs="$(MSBuildAllProjects);@(IntermediateAssembly)" Outputs="$(OutputPath)$(_SGenDllName)">
+    <!-- Delete the file because I can't figure out how to force the SGen task. -->
+    <Delete Files="$(TargetDir)$(TargetName).XmlSerializers.dll" ContinueOnError="true" />
+    <SGen BuildAssemblyName="$(TargetFileName)" BuildAssemblyPath="$(OutputPath)" References="@(ReferencePath)" ShouldGenerateSerializer="true" UseProxyTypes="false" KeyContainer="$(KeyContainerName)" KeyFile="$(KeyOriginatorFile)" DelaySign="$(DelaySign)" ToolPath="$(TargetFrameworkSDKToolsDirectory)" Platform="$(Platform)">
+      <Output TaskParameter="SerializationAssembly" ItemName="SerializationAssembly" />
+    </SGen>
+  </Target>
+</Project>
