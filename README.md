@@ -12,8 +12,6 @@ private String ArchivoKey = "CSD_Pruebas_CFDI_LAN7008173R5.key"; // Archivo key
 private String ArchivoCertificado = "CSD_Pruebas_CFDI_LAN7008173R5.cer"; // Archivo cer
 private String ContraseñaCertificado = "12345678a"; // contrasena del certificado
 private string RFC = "aaa010101aaa"; //No es necesario ya que se toma del certificado
-private FacturaElectronica.CFDI33.Comprobante ComprobanteT;
-
 
 //crear un nuevo comprobante CFDI para la version 3.3
             FacturaElectronica.CFDI33.Comprobante Comprobante = new FacturaElectronica.CFDI33.Comprobante(new FacturaElectronica.Certificado(PosicionCertificado + ArchivoCertificado, PosicionCertificado + ArchivoKey, ContraseñaCertificado));
@@ -137,3 +135,4 @@ private FacturaElectronica.CFDI33.Comprobante ComprobanteT;
                 ComprobanteT = Comprobante;
             }
 
+```
