@@ -1,6 +1,7 @@
 # CFDI-3.3
-Libreria para la generacion del Comprobante de factura electronica SAT CFDI 3.3 Mexico
-Tambien es posible la generacion del Comprobante de recibo de pago SAT 
+Libreria para la generacion y lectura de un Comprobante de factura electronica SAT CFDI 3.3 Mexico
+
+Tambien es posible la generacion y lectura del Comprobante de recibo de pago SAT 
 
 ### Ejemplo
 
