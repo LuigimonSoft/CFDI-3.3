@@ -91,7 +91,7 @@ namespace FacturaElectronica.CFDI33.Complementos
             Errores = new List<string>();
             try
             {
-                String ArchivoXSLT = "cadenaoriginal_TFD_1_1.xslt";
+                String ArchivoXSLT = "\\cadenaoriginal_TFD_1_1.xslt";
 
                 if (System.IO.File.Exists(PosicionEsquema + ArchivoXSLT))
                 {
