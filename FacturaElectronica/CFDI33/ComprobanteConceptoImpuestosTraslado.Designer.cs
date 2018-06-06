@@ -146,6 +146,7 @@ namespace FacturaElectronica.CFDI33
             set
             {
                 TasaOCuotaSpecified = true;
+                sTasaOCuotaSpecified = true;
                 _tasaOCuota = System.Convert.ToDecimal(value);
             }
         }
@@ -153,7 +154,10 @@ namespace FacturaElectronica.CFDI33
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool TasaOCuotaSpecified { get; set; }
 
-        
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool sTasaOCuotaSpecified { get; set; }
+
+
         [System.Xml.Serialization.XmlAttributeAttribute(AttributeName = "Importe")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[0-9]{1,18}(.[0-9]{1,6})?")]
         [EditorBrowsable(EditorBrowsableState.Never)]
@@ -170,6 +174,8 @@ namespace FacturaElectronica.CFDI33
                 if ((Importe.strImporte.Equals(value) != true))
                 {
                     this.Importe.strImporte = value;
+                    sImporteSpecified = true;
+                    ImporteSpecified = true;
                     this.OnPropertyChanged("Importe");
                 }
             }
@@ -177,6 +183,11 @@ namespace FacturaElectronica.CFDI33
 
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public bool sImporteSpecified { get; set; }
+
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ImporteSpecified { get; set; }
+
+       
 
         private static XmlSerializer Serializer
         {

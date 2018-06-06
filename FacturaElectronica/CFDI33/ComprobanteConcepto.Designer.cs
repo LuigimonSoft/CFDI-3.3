@@ -424,6 +424,7 @@ namespace FacturaElectronica.CFDI33
             }
         }
 
+       
         
         [System.Xml.Serialization.XmlAttributeAttribute(AttributeName = "Descuento")]
         [System.ComponentModel.DataAnnotations.RegularExpressionAttribute("[0-9]{1,18}(.[0-9]{1,6})?")]
