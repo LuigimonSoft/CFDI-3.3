@@ -13,6 +13,18 @@ namespace FacturaElectronica.CFDI33
         /// Atributo condicional para señalar el importe del impuesto trasladado que aplica al concepto. No se permiten valores negativos. Es requerido cuando TipoFactor sea Tasa o Cuota
         /// </summary>
         [XmlIgnore]
-        public t_Importe Importe { set; get; }
+        public t_Importe Importe
+        {
+            set
+            {
+                _importe = value;
+                if (TipoFactor != c_TipoFactor.Exento)
+                {
+                    sImporteSpecified = true;
+                    ImporteSpecified = true;
+                }
+            }
+            get { return _importe; }
+        }
     }
 }

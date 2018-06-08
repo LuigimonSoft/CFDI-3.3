@@ -34,7 +34,7 @@ namespace FacturaElectronica.CFDI33
         private c_TasaOCuota _tasaOCuota;
 
         [EditorBrowsable(EditorBrowsableState.Never)]
-        private decimal _importe;
+        private t_Importe _importe;
 
         private static XmlSerializer serializer;
         #endregion
@@ -94,8 +94,11 @@ namespace FacturaElectronica.CFDI33
                 if ((_tasaOCuota.Equals(value) != true))
                 {
                     this._tasaOCuota = value;
-                    sTasaOCuotaSpecified = true;
-                    TasaOCuotaSpecified = true;
+                    if (TipoFactor != c_TipoFactor.Exento)
+                    {
+                        sTasaOCuotaSpecified = true;
+                        TasaOCuotaSpecified = true;
+                    }
                     this.OnPropertyChanged("TasaOCuota");
                 }
             }
@@ -125,8 +128,11 @@ namespace FacturaElectronica.CFDI33
                 if ((Importe.strImporte.Equals(value) != true))
                 {
                     this.Importe.strImporte = value;
-                    sImporteSpecified = true;
-                    ImporteSpecified = true;
+                    if (TipoFactor != c_TipoFactor.Exento)
+                    {
+                        sImporteSpecified = true;
+                        ImporteSpecified = true;
+                    }
                     this.OnPropertyChanged("Importe");
                 }
             }
