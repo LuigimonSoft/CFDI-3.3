@@ -17,7 +17,7 @@ namespace FacturaElectronica.CFDI33
     /// Nodo requerido para asentar la información detallada de una retención de impuestos aplicable al presente concepto.
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.sat.gob.mx/cfd/3")]
     public partial class ComprobanteImpuestosRetencion : System.ComponentModel.INotifyPropertyChanged

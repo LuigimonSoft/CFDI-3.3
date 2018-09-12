@@ -15,7 +15,7 @@ namespace FacturaElectronica.CFDI33.Complementos
     /// Nodo requerido para la información detallada de un traslado de impuesto específico.
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.sat.gob.mx/Pagos")]
     public partial class PagosPagoImpuestosTraslado : System.ComponentModel.INotifyPropertyChanged

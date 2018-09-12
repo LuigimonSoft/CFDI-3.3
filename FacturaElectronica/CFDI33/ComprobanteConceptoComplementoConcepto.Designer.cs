@@ -16,7 +16,7 @@ namespace FacturaElectronica.CFDI33
     /// Nodo opcional donde se incluyen los nodos complementarios de extensión al concepto definidos por el SAT, de acuerdo con las disposiciones particulares para un sector o actividad específica.
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.sat.gob.mx/cfd/3")]
     public partial class ComprobanteConceptoComplementoConcepto : System.ComponentModel.INotifyPropertyChanged

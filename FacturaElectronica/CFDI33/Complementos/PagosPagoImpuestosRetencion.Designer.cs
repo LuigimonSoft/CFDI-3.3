@@ -16,7 +16,7 @@ namespace FacturaElectronica.CFDI33.Complementos
     /// Nodo requerido para registrar la información detallada de una retención de impuesto específico.
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.sat.gob.mx/Pagos")]
     public partial class PagosPagoImpuestosRetencion : System.ComponentModel.INotifyPropertyChanged

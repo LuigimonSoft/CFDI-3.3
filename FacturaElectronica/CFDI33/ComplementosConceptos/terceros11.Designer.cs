@@ -18,7 +18,7 @@ namespace FacturaElectronica.CFDI33.ComplementosConceptos
     /// Complemento concepto para la emisión de Comprobante Fiscal Digital (CFD) y Comprobante Fiscal Digital a través de Internet (CFDI) por orden y cuenta de terceros.
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/terceros")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.sat.gob.mx/terceros", IsNullable=false)]
@@ -440,7 +440,7 @@ namespace FacturaElectronica.CFDI33.ComplementosConceptos
     /// Nodo opcional para expresar información fiscal de terceros
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/terceros")]
     public partial class PorCuentadeTercerosInformacionFiscalTercero : t_UbicacionFiscal
@@ -672,7 +672,7 @@ namespace FacturaElectronica.CFDI33.ComplementosConceptos
     /// Tipo definido para expresar domicilios o direcciones
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.sat.gob.mx/terceros")]
     public partial class t_UbicacionFiscal : System.ComponentModel.INotifyPropertyChanged
@@ -1195,7 +1195,7 @@ namespace FacturaElectronica.CFDI33.ComplementosConceptos
     /// Tipo definido para expresar información aduanera
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.sat.gob.mx/terceros")]
     public partial class t_InformacionAduanera : System.ComponentModel.INotifyPropertyChanged
@@ -1517,7 +1517,7 @@ namespace FacturaElectronica.CFDI33.ComplementosConceptos
     /// Nodo opcional para asentar el número de cuenta predial con el que fue registrado el inmueble, en el sistema catastral de la entidad federativa de que trate.
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/terceros")]
     public partial class PorCuentadeTercerosCuentaPredial : System.ComponentModel.INotifyPropertyChanged
@@ -1788,7 +1788,7 @@ namespace FacturaElectronica.CFDI33.ComplementosConceptos
     /// Nodo opcional para introducir la información aduanera aplicable cuando se trate de ventas de primera mano de mercancías importadas.
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/terceros")]
     public partial class PorCuentadeTercerosInformacionAduanera : t_InformacionAduanera
@@ -2020,7 +2020,7 @@ namespace FacturaElectronica.CFDI33.ComplementosConceptos
     /// Nodo opcional para expresar las partes o componentes que integran la totalidad del concepto expresado en el CFD o CFDI
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/terceros")]
     public partial class PorCuentadeTercerosParte : System.ComponentModel.INotifyPropertyChanged
@@ -2444,7 +2444,7 @@ namespace FacturaElectronica.CFDI33.ComplementosConceptos
     /// Nodo requerido para capturar los impuestos aplicables.
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/terceros")]
     public partial class PorCuentadeTercerosImpuestos : System.ComponentModel.INotifyPropertyChanged
@@ -2745,7 +2745,7 @@ namespace FacturaElectronica.CFDI33.ComplementosConceptos
     /// Nodo para la información detallada de una retención de impuesto específico
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/terceros")]
     public partial class PorCuentadeTercerosImpuestosRetencion : System.ComponentModel.INotifyPropertyChanged
@@ -3050,7 +3050,7 @@ namespace FacturaElectronica.CFDI33.ComplementosConceptos
     /// Nodo para la información detallada de un traslado de impuesto específico
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/terceros")]
     public partial class PorCuentadeTercerosImpuestosTraslado : System.ComponentModel.INotifyPropertyChanged

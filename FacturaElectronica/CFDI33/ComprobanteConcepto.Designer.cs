@@ -16,7 +16,7 @@ namespace FacturaElectronica.CFDI33
     /// Nodo requerido para registrar la información detallada de un bien o servicio amparado en el comprobante.
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.sat.gob.mx/cfd/3")]
     public partial class ComprobanteConcepto : System.ComponentModel.INotifyPropertyChanged

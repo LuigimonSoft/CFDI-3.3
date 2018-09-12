@@ -15,7 +15,7 @@ namespace FacturaElectronica.CFDI33.Complementos
     /// Elemento requerido para incorporar la información de la recepción de pagos.
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.sat.gob.mx/Pagos")]
     public partial class PagosPago : System.ComponentModel.INotifyPropertyChanged

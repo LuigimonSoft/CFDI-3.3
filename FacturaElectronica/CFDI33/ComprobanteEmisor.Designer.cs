@@ -16,7 +16,7 @@ namespace FacturaElectronica.CFDI33
     /// Nodo requerido para expresar la información del contribuyente emisor del comprobante.
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.sat.gob.mx/cfd/3")]
     public partial class ComprobanteEmisor : System.ComponentModel.INotifyPropertyChanged

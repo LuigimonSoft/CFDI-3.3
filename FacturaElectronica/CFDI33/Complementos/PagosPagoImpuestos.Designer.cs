@@ -17,7 +17,7 @@ namespace FacturaElectronica.CFDI33.Complementos
     /// Nodo condicional para expresar el resumen de los impuestos aplicables cuando este documento sea un anticipo.
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.sat.gob.mx/Pagos")]
     public partial class PagosPagoImpuestos : System.ComponentModel.INotifyPropertyChanged

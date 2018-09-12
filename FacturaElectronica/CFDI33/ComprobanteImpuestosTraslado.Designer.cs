@@ -17,7 +17,7 @@ namespace FacturaElectronica.CFDI33
     /// Nodo requerido para asentar la información detallada de un traslado de impuestos aplicable al presente concepto.
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.sat.gob.mx/cfd/3")]
     public partial class ComprobanteImpuestosTraslado : System.ComponentModel.INotifyPropertyChanged

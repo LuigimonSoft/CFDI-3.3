@@ -18,7 +18,7 @@ namespace FacturaElectronica.CFDI33.Complementos
     /// Complemento al Comprobante Fiscal Digital para Impuestos Locales
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/implocal")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.sat.gob.mx/implocal", IsNullable=false)]
@@ -391,7 +391,7 @@ namespace FacturaElectronica.CFDI33.Complementos
     /// Nodo opcional para la expresión de los impuestos locales retenidos
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/implocal")]
     public partial class ImpuestosLocalesRetencionesLocales : System.ComponentModel.INotifyPropertyChanged
@@ -708,7 +708,7 @@ namespace FacturaElectronica.CFDI33.Complementos
     /// Nodo opcional para la expresión de los impuestos locales trasladados
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/implocal")]
     public partial class ImpuestosLocalesTrasladosLocales : System.ComponentModel.INotifyPropertyChanged

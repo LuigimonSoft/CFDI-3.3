@@ -18,7 +18,7 @@ namespace FacturaElectronica.CFDI33.Complementos
     /// Complemento requerido para el Timbrado Fiscal Digital que da validez al Comprobante fiscal digital por Internet.
     /// </summary>
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://www.sat.gob.mx/TimbreFiscalDigital")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.sat.gob.mx/TimbreFiscalDigital", IsNullable=false)]

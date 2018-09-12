@@ -20,7 +20,7 @@ namespace FacturaElectronica.CFDI33
     /// Estándar de Comprobante Fiscal Digital por Internet.
     /// </summary>
     [System.SerializableAttribute()] 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = false, Namespace = "http://www.sat.gob.mx/cfd/3")]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.sat.gob.mx/cfd/3", IsNullable = false)]
