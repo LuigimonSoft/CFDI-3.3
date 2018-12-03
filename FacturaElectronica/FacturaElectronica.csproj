@@ -50,6 +50,10 @@
     <Compile Include="CFDI33\ComplementosConceptos\terceros11.Designer.cs">
       <DependentUpon>terceros11.cs</DependentUpon>
     </Compile>
+    <Compile Include="CFDI33\Complementos\Complemento_SPEI\Complemento_SPEI.cs" />
+    <Compile Include="CFDI33\Complementos\Complemento_SPEI\Complemento_SPEISPEI_TerceroBeneficiario.cs" />
+    <Compile Include="CFDI33\Complementos\Complemento_SPEI\Complemento_SPEISPEI_TerceroOrdenante.cs" />
+    <Compile Include="CFDI33\Complementos\Complemento_SPEI\SPEI_Tercero.cs" />
     <Compile Include="CFDI33\Complementos\c_TipoCadenaPago.cs" />
     <Compile Include="CFDI33\Complementos\implocal.cs">
       <DependentUpon>implocal.xsd</DependentUpon>
