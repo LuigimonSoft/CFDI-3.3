@@ -96,6 +96,9 @@ namespace FacturaElectronica.CFDI33
         [XmlIgnore]
         public Complementos.ImpuestosLocales ImpuestosLocales { set; get; }
 
+        [XmlIgnore]
+        public Complementos.Nomina12.Nomina Nomina { set; get; }
+
         public Comprobante( Certificado certificado)
         {
             init();
@@ -252,6 +255,24 @@ namespace FacturaElectronica.CFDI33
                     }
                     else
                         Errores += ErroresImpLoc;
+                }
+
+                if(Nomina!=null)
+                {
+                    XmlDocument doc = new XmlDocument();
+                    String XMLNomina = String.Empty;
+                    String ErroresNomina = String.Empty;
+                    if (Nomina.GenerarXML(out XMLNomina, out ErroresNomina))
+                    {
+                        doc.LoadXml(XMLNomina);
+                        ComprobanteComplemento ComNomina = new ComprobanteComplemento();
+                        ComNomina.Any.Add(doc.DocumentElement);
+                        if (Complemento == null)
+                            Complemento = new List<ComprobanteComplemento>();
+                        Complemento.Add(ComNomina);
+                    }
+                    else
+                        Errores += ErroresNomina;
                 }
 
                 

@@ -61,6 +61,44 @@
     <Compile Include="CFDI33\Complementos\implocal.Designer.cs">
       <DependentUpon>implocal.cs</DependentUpon>
     </Compile>
+    <Compile Include="CFDI33\Complementos\Nomina\Catalogos\c_Banco.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\Catalogos\c_Estado.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\Catalogos\c_OrigenRecurso.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\Catalogos\c_PeriodicidadPago.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\Catalogos\c_RiesgoPuesto.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\Catalogos\c_TipoContrato.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\Catalogos\c_TipoDeduccion.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\Catalogos\c_TipoHoras.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\Catalogos\c_TipoIncapacidad.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\Catalogos\c_TipoJornada.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\Catalogos\c_TipoNomina.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\Catalogos\c_TipoOtroPago.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\Catalogos\c_TipoPercepcion.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\Catalogos\c_TipoRegimen.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\Nomina.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\Nomina.Designer.cs">
+      <DependentUpon>Nomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CFDI33\Complementos\Nomina\NominaDeducciones.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\NominaDeduccionesDeduccion.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\NominaEmisor.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\NominaEmisorEntidadSNCF.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\NominaIncapacidad.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\NominaOtroPago.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\NominaOtroPagoCompensacionSaldosAFavor.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\NominaOtroPagoSubsidioAlEmpleo.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\NominaPercepciones.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\NominaPercepcionesJubilacionPensionRetiro.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\NominaPercepcionesPercepcion.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\NominaPercepcionesPercepcionAccionesOTitulos.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\NominaPercepcionesPercepcionHorasExtra.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\NominaPercepcionesSeparacionIndemnizacion.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\NominaReceptor.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\NominaReceptorSindicalizado.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\NominaReceptorSubContratacion.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\StringEnum.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\StringValueAttribute.cs" />
+    <Compile Include="CFDI33\Complementos\Nomina\VerificadorPatrones.cs" />
     <Compile Include="CFDI33\Complementos\Pagos10.cs">
       <DependentUpon>Pagos10.xsd</DependentUpon>
     </Compile>
@@ -314,6 +352,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
