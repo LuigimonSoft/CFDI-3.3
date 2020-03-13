@@ -564,7 +564,7 @@ namespace FacturaElectronica.CFDI33
             set
             {
                 if (SubTotal == null)
-                    SubTotal = new t_Importe("0.000001");
+                    SubTotal = new t_Importe("0.01");
                 if ((SubTotal.strImporte.Equals(value) != true))
                 {
                     SubTotal.strImporte = value;
@@ -719,7 +719,7 @@ namespace FacturaElectronica.CFDI33
             set
             {
                 if (Total == null)
-                    Total = new t_Importe("0.000001");
+                    Total = new t_Importe("0.01");
 
                 if ((Total.strImporte.Equals(value) != true))
                 {
@@ -894,6 +894,8 @@ namespace FacturaElectronica.CFDI33
                 XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
                 ns.Add("xsi", "http://www.w3.org/2001/XMLSchema-instance");
                 ns.Add("cfdi", "http://www.sat.gob.mx/cfd/3");
+                if(Nomina!=null)
+                    ns.Add("nomina12", "http://www.sat.gob.mx/nomina12");
                 Serializer.Serialize(xmlWriter, this, ns);
                 memoryStream.Seek(0, SeekOrigin.Begin);
                 streamReader = new System.IO.StreamReader(memoryStream, encoding);

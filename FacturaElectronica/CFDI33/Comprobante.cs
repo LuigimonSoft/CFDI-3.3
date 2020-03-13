@@ -27,6 +27,7 @@ namespace FacturaElectronica.CFDI33
             this._receptor = new ComprobanteReceptor();
             this._emisor = new ComprobanteEmisor();
             this._version = "3.3";
+            this._moneda = c_Moneda.MXN;
             Total = new t_Importe(0);
             SubTotal = new t_Importe(0);
             Emisor = new CFDI33.ComprobanteEmisor();
@@ -183,7 +184,10 @@ namespace FacturaElectronica.CFDI33
             //----
 
             String XMLTimbre=String.Empty;
+            String XMLNomina = string.Empty;
+
             bool ContieneTimbre = RemoverTimbre(XML, out XMLTimbre, out XML);
+            bool ContieneNomina = RemoverNomina(XML, out XMLNomina, out XML);
             
             if (EsCFDIXmlValido(Esquemas, new StringReader(RemoverAddenda(XML).Replace("\r", "").Replace("\n", "")), out Errores))
             {
@@ -195,15 +199,20 @@ namespace FacturaElectronica.CFDI33
                         Comp.TimbreFiscalDigital = Complementos.TimbreFiscalDigital.Deserialize(XMLTimbre);
                         Comp.TimbreFiscalDigital.GenerarQR(Comp.Emisor.Rfc.Rfc, Comp.Receptor.Rfc.Rfc, Comp.strTotal);
                     }
+                    if(ContieneNomina)
+                    {
+                        Comp.Nomina = Complementos.Nomina12.Nomina.Deserialize(XMLNomina);
+                    }
+
                     return Comp;
                 }
                 else
                     return null;
-                if (ContieneTimbre)
+                /*if (ContieneTimbre)
                 {
                     Comp.TimbreFiscalDigital=Complementos.TimbreFiscalDigital.Deserialize(XMLTimbre);
                     Comp.TimbreFiscalDigital.GenerarQR(Comp.Emisor.Rfc.Rfc, Comp.Receptor.Rfc.Rfc, Comp.strTotal);
-                }
+                }*/
 
             }
             else
@@ -259,6 +268,7 @@ namespace FacturaElectronica.CFDI33
 
                 if(Nomina!=null)
                 {
+                    schemaLocation +=" http://www.sat.gob.mx/nomina12 http://www.sat.gob.mx/sitio_internet/cfd/nomina/nomina12.xsd";
                     XmlDocument doc = new XmlDocument();
                     String XMLNomina = String.Empty;
                     String ErroresNomina = String.Empty;
@@ -566,6 +576,41 @@ namespace FacturaElectronica.CFDI33
 
                 XMLTimbre = XML.Substring(inicio, fin-inicio);
                 XMLSinTimbre = XML.Replace(XMLTimbre, "");
+            }
+            return Resultado;
+        }
+
+        private static bool RemoverNomina(String XML, out String XMLNomina, out String XMLSinNomina)
+        {
+            bool Resultado = false;
+            XMLSinNomina = String.Empty;
+            XMLNomina = String.Empty;
+            XMLSinNomina = XML;
+            if (XML.Contains("<nomina12:Nomina"))
+            {
+                Resultado = true;
+                int inicio = XML.IndexOf("<nomina12:Nomina");
+                int fin = XML.IndexOf(">", inicio);
+                //if (fin == -1)
+                    fin = XML.IndexOf("</nomina12:Nomina>") + "</nomina12:Nomina>".Length;
+                /*else
+                    fin += ("/>").Length;*/
+
+                XMLNomina = XML.Substring(inicio, fin - inicio);
+                XMLSinNomina = XML.Replace(XMLNomina, "");
+            }
+            else if(XML.Contains("<Nomina"))
+            {
+                Resultado = true;
+                int inicio = XML.IndexOf("<Nomina");
+                int fin = XML.IndexOf(">", inicio);
+                //if (fin == -1)
+                fin = XML.IndexOf("</Nomina>") + "</Nomina>".Length;
+                /*else
+                    fin += ("/>").Length;*/
+
+                XMLNomina = XML.Substring(inicio, fin - inicio);
+                XMLSinNomina = XML.Replace(XMLNomina, "");
             }
             return Resultado;
         }

@@ -30,6 +30,7 @@
         {
             this.btnCFDI = new System.Windows.Forms.Button();
             this.txtXML = new ScintillaNET.Scintilla();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCFDI
@@ -50,11 +51,22 @@
             this.txtXML.TabIndex = 1;
             this.txtXML.Text = "scintilla1";
             // 
+            // btnCargar
+            // 
+            this.btnCargar.Location = new System.Drawing.Point(493, 444);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(75, 23);
+            this.btnCargar.TabIndex = 2;
+            this.btnCargar.Text = "Cargar xml";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 450);
+            this.ClientSize = new System.Drawing.Size(578, 488);
+            this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.txtXML);
             this.Controls.Add(this.btnCFDI);
             this.Name = "Form1";
@@ -67,6 +79,7 @@
 
         private System.Windows.Forms.Button btnCFDI;
         private ScintillaNET.Scintilla txtXML;
+        private System.Windows.Forms.Button btnCargar;
     }
 }
 

@@ -98,7 +98,6 @@
     <Compile Include="CFDI33\Complementos\Nomina\NominaReceptorSubContratacion.cs" />
     <Compile Include="CFDI33\Complementos\Nomina\StringEnum.cs" />
     <Compile Include="CFDI33\Complementos\Nomina\StringValueAttribute.cs" />
-    <Compile Include="CFDI33\Complementos\Nomina\VerificadorPatrones.cs" />
     <Compile Include="CFDI33\Complementos\Pagos10.cs">
       <DependentUpon>Pagos10.xsd</DependentUpon>
     </Compile>

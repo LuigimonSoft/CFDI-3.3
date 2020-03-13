@@ -15,7 +15,7 @@ namespace ProbadorCFDI33
     {
 
         //Datos Certificado
-        private String PosicionCertificado = @"C:\CSDAAA010101AAA\Cert_Sellos\CSD_Pruebas_CFDI_LAN7008173R5\";  // carpeta en la que se encuentra el certificado y su archivo key
+        private String PosicionCertificado = @"E:\CSDAAA010101AAA\Cert_Sellos\CSD_Pruebas_CFDI_LAN7008173R5\";  // carpeta en la que se encuentra el certificado y su archivo key
         private String ArchivoKey = "CSD_Pruebas_CFDI_LAN7008173R5.key"; // Archivo key
 
         private String ArchivoCertificado = "CSD_Pruebas_CFDI_LAN7008173R5.cer"; // Archivo cer
@@ -165,12 +165,84 @@ namespace ProbadorCFDI33
 
             Comprobante.Pagos = Pagos;*/
 
+            Comprobante.Nomina = new FacturaElectronica.CFDI33.Complementos.Nomina12.Nomina();
+            Comprobante.Nomina.FechaFinalPago = new DateTime(2020 , 1, 15, 0, 0, 0);
+            Comprobante.Nomina.FechaInicialPago = new DateTime(2020, 01, 01, 0, 0,0);
+            Comprobante.Nomina.FechaPago = new DateTime(2020, 01, 15, 0, 0, 0);
+            Comprobante.Nomina.NumDiasPagados = new decimal(15.208);
+            Comprobante.Nomina.TipoNomina = FacturaElectronica.CFDI33.Complementos.Nomina12.c_TipoNomina.O;
+            Comprobante.Nomina.TotalDeducciones = new decimal(1151.13);
+            Comprobante.Nomina.TotalOtrosPagos = new decimal(84.37);
+            Comprobante.Nomina.TotalPercepciones = new decimal(1873.97);
 
-            if (Comprobante.GenerarPreCFDI(out XML, out Errores, true))
+            Comprobante.Nomina.Emisor = new FacturaElectronica.CFDI33.Complementos.Nomina12.NominaEmisor();
+            Comprobante.Nomina.Emisor.RegistroPatronal = "Y6653628104";
+
+            Comprobante.Nomina.Receptor = new FacturaElectronica.CFDI33.Complementos.Nomina12.NominaReceptor();
+            Comprobante.Nomina.Receptor.Antigüedad = "P15W";
+            Comprobante.Nomina.Receptor.Banco = FacturaElectronica.CFDI33.Complementos.Nomina12.c_Banco.Banco014;
+            Comprobante.Nomina.Receptor.ClaveEntFed = FacturaElectronica.CFDI33.Complementos.Nomina12.c_Estado.DIF;
+            Comprobante.Nomina.Receptor.Curp = "HEPN701115MDFRRR06";
+            Comprobante.Nomina.Receptor.Departamento = "ADMINISTRACION";
+            Comprobante.Nomina.Receptor.FechaInicioRelLaboral = new DateTime(2019, 10, 01, 0, 0, 0);
+            Comprobante.Nomina.Receptor.NumEmpleado = "8";
+            Comprobante.Nomina.Receptor.NumSeguridadSocial = "39907010506";
+            Comprobante.Nomina.Receptor.PeriodicidadPago = FacturaElectronica.CFDI33.Complementos.Nomina12.c_PeriodicidadPago.Periodo04;
+            Comprobante.Nomina.Receptor.Puesto = "AUXILIAR";
+            Comprobante.Nomina.Receptor.RiesgoPuesto = FacturaElectronica.CFDI33.Complementos.Nomina12.c_RiesgoPuesto.Riesgo1;
+            Comprobante.Nomina.Receptor.SalarioBaseCotApor = new decimal(128.79);
+            Comprobante.Nomina.Receptor.SalarioDiarioIntegrado = new decimal(128.79);
+            Comprobante.Nomina.Receptor.Sindicalizado = FacturaElectronica.CFDI33.Complementos.Nomina12.NominaReceptorSindicalizado.No;
+            Comprobante.Nomina.Receptor.TipoContrato = FacturaElectronica.CFDI33.Complementos.Nomina12.c_TipoContrato.TipoContrato01;
+            Comprobante.Nomina.Receptor.TipoJornada = FacturaElectronica.CFDI33.Complementos.Nomina12.c_TipoJornada.TipoJornada01;
+            Comprobante.Nomina.Receptor.TipoRegimen = FacturaElectronica.CFDI33.Complementos.Nomina12.c_TipoRegimen.TipoRegimen02;
+
+            Comprobante.Nomina.Percepciones = new FacturaElectronica.CFDI33.Complementos.Nomina12.NominaPercepciones();
+            Comprobante.Nomina.Percepciones.TotalExento = 0;
+            Comprobante.Nomina.Percepciones.TotalGravado = new decimal(1873.97);
+            Comprobante.Nomina.Percepciones.TotalSueldos = new decimal(1873.97);
+
+            FacturaElectronica.CFDI33.Complementos.Nomina12.NominaPercepcionesPercepcion percepcion = new FacturaElectronica.CFDI33.Complementos.Nomina12.NominaPercepcionesPercepcion();
+            percepcion.Clave = "P001";
+            percepcion.Concepto = "SUELDO";
+            percepcion.ImporteExento = 0;
+            percepcion.ImporteGravado = new decimal(1873.97);
+            percepcion.TipoPercepcion = FacturaElectronica.CFDI33.Complementos.Nomina12.c_TipoPercepcion.TipoPercepcion001;
+            Comprobante.Nomina.Percepciones.Percepcion.Add(percepcion);
+
+            Comprobante.Nomina.Deducciones = new FacturaElectronica.CFDI33.Complementos.Nomina12.NominaDeducciones();
+            Comprobante.Nomina.Deducciones.TotalOtrasDeducciones = new decimal(1151.13);
+            FacturaElectronica.CFDI33.Complementos.Nomina12.NominaDeduccionesDeduccion deduccion = new FacturaElectronica.CFDI33.Complementos.Nomina12.NominaDeduccionesDeduccion();
+            deduccion.Clave = "D094";
+            deduccion.Concepto = "CREDITO INFONAVIT";
+            deduccion.Importe = new decimal(1151.13);
+            deduccion.TipoDeduccion = FacturaElectronica.CFDI33.Complementos.Nomina12.c_TipoDeduccion.TipoDeduccion010;
+            Comprobante.Nomina.Deducciones.Deduccion.Add(deduccion);
+
+            FacturaElectronica.CFDI33.Complementos.Nomina12.NominaOtroPago otropago = new FacturaElectronica.CFDI33.Complementos.Nomina12.NominaOtroPago();
+            otropago.Clave = "D100";
+            otropago.Concepto = "SUBSIDIO PARA EL EMPLEO";
+            otropago.Importe = new decimal(84.37);
+            otropago.TipoOtroPago = FacturaElectronica.CFDI33.Complementos.Nomina12.c_TipoOtroPago.TipoOtroPago002;
+            otropago.SubsidioAlEmpleo = new FacturaElectronica.CFDI33.Complementos.Nomina12.NominaOtroPagoSubsidioAlEmpleo();
+            otropago.SubsidioAlEmpleo.SubsidioCausado = new decimal(191.33);
+            Comprobante.Nomina.OtrosPagos = new List<FacturaElectronica.CFDI33.Complementos.Nomina12.NominaOtroPago>();
+            Comprobante.Nomina.OtrosPagos.Add(otropago);
+
+            string Error;
+            Comprobante.Nomina.GenerarXML(out XML, out Error);
+
+           if (Comprobante.GenerarPreCFDI(out XML, out Errores, true))
             {
                 txtXML.Text = XML;
                 ComprobanteT = Comprobante;
             }
+        }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            List<string> Errores;
+            FacturaElectronica.CFDI33.Comprobante Comprobante = FacturaElectronica.CFDI33.Comprobante.CargarXMLCFDI(txtXML.Text, out Errores, true);
         }
     }
 }

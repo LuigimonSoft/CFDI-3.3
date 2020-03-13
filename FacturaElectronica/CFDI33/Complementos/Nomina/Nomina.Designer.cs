@@ -19,10 +19,13 @@ namespace FacturaElectronica.CFDI33.Complementos.Nomina12
     /// </summary>
     [System.SerializableAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.sat.gob.mx/Nomina12")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.sat.gob.mx/Nomina12", IsNullable = false)]
+    /*[System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.sat.gob.mx/Nomina12")]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.sat.gob.mx/Nomina12", IsNullable = false)]*/
     public partial class Nomina : System.ComponentModel.INotifyPropertyChanged
     {
+        /*[XmlAttribute(AttributeName = "schemaLocation", Namespace = "http://www.w3.org/2001/XMLSchema-instance")]
+        public string schemaLocation = "http://www.sat.gob.mx/nomina12 http://www.sat.gob.mx/sitio_internet/cfd/nomina/nomina12.xsd";*/
+
 
         #region Propiedades Privadas
         [EditorBrowsable(EditorBrowsableState.Never)]
@@ -470,6 +473,9 @@ namespace FacturaElectronica.CFDI33.Complementos.Nomina12
             {
                 memoryStream = new System.IO.MemoryStream();
                 System.Xml.XmlWriterSettings xmlWriterSettings = new System.Xml.XmlWriterSettings();
+                xmlWriterSettings.CheckCharacters = true;
+                xmlWriterSettings.Indent = false;
+                xmlWriterSettings.IndentChars = "\t";
                 xmlWriterSettings.Encoding = encoding;
                 System.Xml.XmlWriter xmlWriter = XmlWriter.Create(memoryStream, xmlWriterSettings);
                 Serializer.Serialize(xmlWriter, this);
@@ -529,6 +535,14 @@ namespace FacturaElectronica.CFDI33.Complementos.Nomina12
             System.IO.StringReader stringReader = null;
             try
             {
+                
+                input = input.Replace("nomina12:", "");
+
+               /* if (input.IndexOf("xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"") == -1)
+                {
+                    input = input.Replace("<Nomina", "<Nomina xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:nomina12=\"http://www.sat.gob.mx/nomina12\" xsi:schemaLocation=\"http://www.sat.gob.mx/nomina12 http://www.sat.gob.mx/sitio_internet/cfd/nomina/nomina12.xsd\"  ");
+                }*/
+
                 stringReader = new System.IO.StringReader(input);
                 return ((Nomina)(Serializer.Deserialize(XmlReader.Create(stringReader))));
             }

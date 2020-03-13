@@ -357,7 +357,7 @@ namespace FacturaElectronica.CFDI33
             get
             {
                 return VerificadorPatrones.RemplazarCaracteresEspeciales(this._descripcion);
-            }
+            }                                    
             set
             {
                 string Error = String.Empty;
@@ -392,7 +392,7 @@ namespace FacturaElectronica.CFDI33
             set
             {
                 if(ValorUnitario==null)
-                    ValorUnitario=new t_Importe("0.000001");
+                    ValorUnitario=new t_Importe("0.01");
                 if ((ValorUnitario.strImporte.Equals(value) != true))
                 {
                     this.ValorUnitario.strImporte = value;
@@ -414,7 +414,7 @@ namespace FacturaElectronica.CFDI33
             set
             {
                 if (Importe == null)
-                    Importe = new t_Importe("0.000001");
+                    Importe = new t_Importe("0.01");
 
                 if ((Importe.strImporte.Equals(value) != true))
                 {

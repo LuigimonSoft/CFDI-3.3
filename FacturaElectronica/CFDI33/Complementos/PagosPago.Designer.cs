@@ -275,7 +275,7 @@ namespace FacturaElectronica.CFDI33.Complementos
             set
             {
                 if (Monto == null)
-                    Monto = new t_Importe("0.000001");
+                    Monto = new t_Importe("0.01");
 
                 if ((Monto.strImporte.Equals(value) != true))
                 {

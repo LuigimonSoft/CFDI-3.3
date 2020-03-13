@@ -107,7 +107,7 @@ namespace FacturaElectronica.CFDI33
                 {
 
                     if (TotalImpuestosRetenidos == null)
-                        TotalImpuestosRetenidos = new t_Importe("0.000001");
+                        TotalImpuestosRetenidos = new t_Importe("0.01");
 
                     if ((TotalImpuestosRetenidos.strImporte.Equals(value) != true))
                     {
@@ -137,7 +137,7 @@ namespace FacturaElectronica.CFDI33
                 if (value.Trim().Length > 0)
                 {
                     if (TotalImpuestosTrasladados == null)
-                        TotalImpuestosTrasladados = new t_Importe("0.000001");
+                        TotalImpuestosTrasladados = new t_Importe("0.01");
 
                     if ((TotalImpuestosTrasladados.strImporte.Equals(value) != true))
                     {

@@ -11,6 +11,7 @@ namespace FacturaElectronica.CFDI33
     {
         private decimal valor;
         private String strvalor;
+        private c_Moneda _moneda=c_Moneda.MXN;
 
         /// <summary>
         /// Especifica el metodo que se utilizar para los decimales
@@ -38,7 +39,7 @@ namespace FacturaElectronica.CFDI33
             Moneda = Comprobante.toMoneda(moneda);
         }
 
-        public c_Moneda Moneda { set; get; }
+        public c_Moneda Moneda { set { _moneda = value; } get { return _moneda; } }
 
        /* public t_Importe(decimal dValor,TipoDecimales ModificadorDecimales)
         {
